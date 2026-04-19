@@ -1,0 +1,81 @@
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.min.css");
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
+  --font-cursive: "Dancing Script", cursive;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+.slide-fade-enter-active {
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+.slide-fade-leave-active {
+  transition: none;
+  overflow: hidden;
+}
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  max-height: 0;
+  opacity: 0;
+  transform: translateY(-10px);
+}
+.slide-fade-enter-to,
+.slide-fade-leave-from {
+  max-height: 500px;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.gradient-text {
+  position: relative;
+  display: inline-block;
+  color: transparent;
+  background: linear-gradient(74deg, #4285f4 0, #9b72cb 9%, #d96570 20%, #d96570 24%, #9b72cb 35%, #4285f4 44%, #9b72cb 50%, #d96570 56%, #1b1c1d 75%, #1b1c1d 100%);
+  background-size: 400% 100%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Markdown Cheer Guide Styling */
+.prose-cheer {
+  color: #e4e4e7;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  word-break: keep-all;
+}
+.prose-cheer h1, .prose-cheer h2, .prose-cheer h3 {
+  color: #fff;
+  font-weight: 800;
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+}
+.prose-cheer p {
+  margin-bottom: 1em;
+}
+.prose-cheer strong {
+  font-weight: 700;
+  color: #ec4899; /* pink-500 default */
+}
+/* Allow overrides for custom colors in markdown HTML */
+.prose-cheer .text-blue-500 {
+  color: #3b82f6 !important;
+}
+.prose-cheer .text-red-500 {
+  color: #ef4444 !important;
+}
+.prose-cheer em {
+  font-style: italic;
+  color: #9ca3af;
+}
+.prose-cheer br {
+  display: block;
+  content: "";
+  margin-top: 0.5em;
+}

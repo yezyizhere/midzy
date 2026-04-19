@@ -1,0 +1,55 @@
+export const CHEER_ALBUMS = [
+  // { albumImage: '', albumName: '제목', label: '21' },
+  { albumImage: '/picture/albums/album_17.jpg', albumName: 'Ice Cream', label: '21' },
+  { albumImage: '/picture/album/daechoo.jpg', albumName: 'That\'s A No No', label: '20' },
+  { albumImage: '/picture/albums/album_16.jpg', albumName: 'TUNNEL VISION', label: '19' },
+  { albumImage: 'https://cdnimg.melon.co.kr/cm2/album/images/118/48/663/11848663_20250609115946_500.jpg?797cdd044923dca67d9d79f32235be51/melon/resize/260/quality/80/optimize', albumName: 'GWBG', label: '18' },
+  { albumImage: '/picture/album/kissandtell.jpg', albumName: 'Kiss&Tell', label: '17' },
+  { albumImage: 'https://cdnimg.melon.co.kr/cm2/album/images/117/32/611/11732611_20250310111221_500.jpg?7b8f321965c7e2f00ed43f9f86ec2244/melon/resize/282/quality/80/optimize', albumName: 'Air', label: '16' },
+  { albumImage: '/picture/album/imf.jpg', albumName: 'Imaginary Friend', label: '15' },
+  { albumImage: 'https://cdnimg.melon.co.kr/cm2/album/images/116/25/589/11625589_20241025102352_500.jpg?f78acecc8dba71b4082e344dacb45403/melon/resize/260/quality/80/optimize', albumName: 'GOLD', label: '14' },
+  { albumImage: '/picture/album/mrv.jpg', albumName: 'Mr.Vampire', label: '13' },
+  { albumImage: 'https://cdnimg.melon.co.kr/cm2/album/images/113/86/125/11386125_20240108182050_500.jpg?YUV422-90/melon/resize/260', albumName: 'BORN TO BE', label: '12' },
+  { albumImage: '/picture/album/untouch.jpg', albumName: 'Untouchable', label: '11' },
+  { albumImage: '/picture/album/nmb.jpg', albumName: 'None of my Business', label: '10' },
+  { albumImage: 'https://cdnimg.melon.co.kr/cm2/album/images/112/77/647/11277647_20230731184013_500.jpg?YUV420-90/melon/resize/282', albumName: 'CAKE', label: '9' },
+  { albumImage: 'https://cdnimg.melon.co.kr/cm2/album/images/111/12/176/11112176_20221129102941_500.jpg?464f37ad4bf227b507ce6d3580547b9b/melon/resize/282/quality/80/optimize', albumName: 'CHESHIRE', label: '8' },
+  { albumImage: 'https://cdnimg.melon.co.kr/cm2/album/images/110/04/992/11004992_20220722175827_500.jpg?7925173e004f56f8d081fdec56fbaa15/melon/resize/282/quality/80/optimize', albumName: 'SNEAKERS', label: '7' },
+  { albumImage: 'https://cdnimg.melon.co.kr/cm2/album/images/107/21/169/10721169_20210923195418_500.jpg?5fde9ecf53ea2dd1045b94701b60e753/melon/resize/282/quality/80/optimize', albumName: 'LOCO', label: '6' },
+  { albumImage: 'https://cdnimg.melon.co.kr/cm2/album/images/106/00/760/10600760_20210429213541_500.jpg?4fb70096b3910c7eb99311aa1ef0908b/melon/resize/282/quality/80/optimize', albumName: '마피아', label: '5' },
+  { albumImage: 'https://cdnimg.melon.co.kr/cm2/album/images/104/76/630/10476630_20200818114209_500.jpg?d7bc05855d230f35f8b8c864a41f8d86/melon/resize/282/sharpen/0x1', albumName: 'NOT SHY', label: '4' },
+  { albumImage: 'https://cdnimg.melon.co.kr/cm2/album/images/104/00/522/10400522_20200309153009_500.jpg?84df9aca6a6aff2443cd8c22495d5b05/melon/resize/282/quality/80/optimize', albumName: 'WANNABE', label: '3' },
+  { albumImage: 'https://cdnimg.melon.co.kr/cm/album/images/103/12/251/10312251_500.jpg?c86b1363452350da88ea588f5e50b921/melon/resize/282/quality/80/optimize', albumName: 'ICY', label: '2' },
+  { albumImage: 'https://cdnimg.melon.co.kr/cm/album/images/102/50/473/10250473_500.jpg?87c609bcbfac930b0cce1f692f7bff4c/melon/resize/282/sharpen/0x1', albumName: '달라달라', label: '1' }
+];
+
+export const ALBUM_MAP: Record<string, string> = {
+  1: '달라달라', 2: 'ICY', 3: 'WANNABE', 4: 'NOT SHY', 5: '마피아',
+  6: 'LOCO', 7: 'SNEAKERS', 8: 'CHESHIRE', 9: 'CAKE', 10: 'None of my Business',
+  11: 'Untouchable', 12: 'BORN TO BE', 13: 'Mr.Vampire', 14: 'GOLD',
+  15: 'Imaginary Friend', 16: 'Air', 17: 'Kiss&Tell', 18: 'GWBG', 19: 'TUNNEL VISION', 20: 'That\'s A No No', 21: 'Ice Cream'
+};
+
+export const VIDEO_MAP: Record<string, string> = {
+  1: 'https://youtu.be/ay97L0DAu9A?si=ZLPbfRxMpO39o9dE',
+  2: 'https://youtu.be/mBvdwhgyqVY?si=2m6Aah5nWkMQFnxv',
+  3: 'https://youtu.be/Vp9I_m6znMM?si=T0Sup2tOLNrdx_9x',
+  4: 'https://www.youtube.com/watch?v=4UEt5ShziSI',
+  5: 'https://www.youtube.com/watch?v=PSFW96qPK0g',
+  6: 'https://www.youtube.com/watch?v=t2W2pznm3ZI',
+  7: 'https://www.youtube.com/watch?v=DedU4DcA1Ec',
+  8: 'https://www.youtube.com/watch?v=0a-p6r7ua48',
+  9: 'https://www.youtube.com/watch?v=-GhmTVCBYBk',
+  10: 'https://www.youtube.com/watch?v=ffmGWmZ4XY0',
+  11: 'https://www.youtube.com/watch?v=WWMU8vRfWT0',
+  12: 'https://www.youtube.com/watch?v=_Dq7Sb3k1lo',
+  13: 'https://www.youtube.com/watch?v=pgeonjRmk64',
+  14: 'https://youtu.be/1TWhd-OPObo?si=Irfw2fSg6Ceeb32m',
+  15: 'https://youtu.be/rB9VawHOeWo?si=mcmfkdowx_6FFy93',
+  16: 'https://youtu.be/nEGU6pbRGDk?si=BrQuGg4T_TcKhMiZ',
+  17: 'https://youtu.be/G6HCX42z1gg?si=zb4esYkHd33pZiIw',
+  18: 'https://youtu.be/d7E7XgI6RGg?si=RRzydzbWJ8OGGrs9',
+  19: 'https://www.youtube.com/watch?v=d7E7XgI6RGg',
+  20: 'https://www.youtube.com/watch?v=Geh1ZEjkaeM',
+  21: 'https://www.youtube.com/watch?v=YW4Y2wYWtdc&feature=youtu.be',
+};
