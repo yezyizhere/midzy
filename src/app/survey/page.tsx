@@ -23,27 +23,43 @@ export default function SurveyPage() {
     setAnswers(newAnswers);
   };
 
-  // 점수 계산 (각 멤버별 점수, 맞췄을 때 +1점)
+  // 점수 계산 (각 멤버별 점수, 맞췄을 때 question.score점 부여)
   const scores = useMemo(() => {
     const newScores = new Array(MEMBER_NAMES.length).fill(0);
     answers.forEach((val, qIdx) => {
       if (val === 1 && SURVEY_QUESTIONS[qIdx]) { // 'O'를 선택한 경우
-        SURVEY_QUESTIONS[qIdx].targets.forEach(memberIdx => {
-          newScores[memberIdx] += 1;
+        const question = SURVEY_QUESTIONS[qIdx];
+        question.targets.forEach(memberIdx => {
+          newScores[memberIdx] += question.score;
         });
       }
     });
     return newScores;
   }, [answers]);
 
-  // 비율 계산 (%) - 한 멤버가 받을 수 있는 최대 점수는 4점
+  // 각 멤버가 얻을 수 있는 최대 점수 계산
+  const maxPossibleScores = useMemo(() => {
+    const totals = new Array(MEMBER_NAMES.length).fill(0);
+    SURVEY_QUESTIONS.forEach(q => {
+      q.targets.forEach(memberIdx => {
+        totals[memberIdx] += q.score;
+      });
+    });
+    return totals;
+  }, []);
+
+  // 비율 계산 (%)
   const percents = useMemo(() => {
-    return scores.map(score => Math.round((score / 4) * 100));
-  }, [scores]);
+    return scores.map((score, idx) => {
+      const max = maxPossibleScores[idx] || 1; // 0으로 나누기 방지
+      return Math.round((score / max) * 100);
+    });
+  }, [scores, maxPossibleScores]);
 
   // 최고점 동점 계산 및 조합명 반환 로직
   const mateName = useMemo(() => {
-    if (pageIndex !== 4) return '';
+    const lastPageIndex = Math.ceil(SURVEY_QUESTIONS.length / 5) + 1;
+    if (pageIndex !== lastPageIndex) return '';
     const maxScore = Math.max(...scores);
     // 점수가 다 0점이면 처리
     if (maxScore === 0) return '없음';
@@ -82,16 +98,19 @@ export default function SurveyPage() {
 
   // 현재 페이지의 모든 질문이 답변되었는지 확인
   const isCurrentPageAnswered = useMemo(() => {
-    if (pageIndex === 1) return !answers.slice(0, 5).includes(-1);
-    if (pageIndex === 2) return !answers.slice(5, 10).includes(-1);
-    if (pageIndex === 3) return !answers.slice(10, 15).includes(-1);
+    if (pageIndex >= 1 && pageIndex <= 5) {
+      const start = (pageIndex - 1) * 5;
+      const end = start + 5;
+      return !answers.slice(start, end).includes(-1);
+    }
     return true;
   }, [pageIndex, answers]);
 
   const currentQuestions = useMemo(() => {
-    if (pageIndex === 1) return SURVEY_QUESTIONS.slice(0, 5);
-    if (pageIndex === 2) return SURVEY_QUESTIONS.slice(5, 10);
-    if (pageIndex === 3) return SURVEY_QUESTIONS.slice(10, 15);
+    if (pageIndex >= 1 && pageIndex <= 5) {
+      const start = (pageIndex - 1) * 5;
+      return SURVEY_QUESTIONS.slice(start, start + 5);
+    }
     return [];
   }, [pageIndex]);
 
@@ -114,7 +133,7 @@ export default function SurveyPage() {
             <div className="flex flex-col gap-3 justify-center items-center mt-5 text-gray-300">
               <p>1. 본인의 최애를 떠올려보세요</p>
               <p>2. 얼마나 해당되는지 선택하세요</p>
-              <p className="text-blue-400 font-medium">총 15문항으로 이루어져 있습니다</p>
+              <p className="text-blue-400 font-medium">총 25문항으로 이루어져 있습니다</p>
 
               <div className="flex items-center gap-3 mt-8">
                 <button
@@ -136,12 +155,12 @@ export default function SurveyPage() {
         </section>
       )}
 
-      {/* 1~3. 질문 페이지 (5문제씩 분할) */}
-      {(pageIndex >= 1 && pageIndex <= 3) && (
+      {/* 1~5. 질문 페이지 (5문제씩 분할) */}
+      {(pageIndex >= 1 && pageIndex <= 5) && (
         <section className="flex flex-col justify-center items-center min-h-[80vh] px-5 md:px-7 mt-5">
           <div className="w-full max-w-xl space-y-4">
             <div className="text-center pt-6 text-pink-400 font-bold tracking-wide text-xl md:text-2xl drop-shadow-[0_0_10px_rgba(236,72,153,0.5)]">
-              STEP {pageIndex} / 3
+              STEP {pageIndex} / 5
             </div>
             {currentQuestions.map((question, idx) => {
               const qIdx = (pageIndex - 1) * 5 + idx;
@@ -184,7 +203,7 @@ export default function SurveyPage() {
                 : 'bg-zinc-700 text-zinc-500 cursor-not-allowed'
                 }`}
             >
-              {pageIndex === 3 ? '결과보기' : '다음'}
+              {pageIndex === 5 ? '결과보기' : '다음'}
             </button>
             {!isCurrentPageAnswered && (
               <p className="text-zinc-400 mt-4 text-sm animate-pulse">현재 페이지의 모든 문항을 선택해주세요</p>
@@ -193,8 +212,8 @@ export default function SurveyPage() {
         </section>
       )}
 
-      {/* 4. 결과 페이지 */}
-      {pageIndex === 4 && (
+      {/* 6. 결과 페이지 */}
+      {pageIndex === 6 && (
         <section className="flex flex-col justify-center items-center min-h-[80vh] pt-10 px-4 ">
           <div className="w-full max-w-xl p-8 bg-zinc-800/40 border border-zinc-700 rounded-3xl shadow-2xl flex flex-col gap-10">
             {/* 메이트 명칭 */}
