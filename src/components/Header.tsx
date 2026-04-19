@@ -35,6 +35,7 @@ export default function Header() {
     { href: "/", label: "메인 페이지" },
     { href: "/live", label: "라이브" },
     { href: "/broadcast", label: "공방참여" },
+    { href: "/practice", label: "공방신청연습" },
     { href: "/cheer", label: "응원법" },
     { href: "/streaming", label: "스밍리스트" },
     { href: "/survey", label: "최애찾기" },
