@@ -8,15 +8,16 @@ export const BOX_ITEMS = [
 ];
 
 export const CD_LINKS = [
-  { cdname: '사웨', cdurl: 'https://bit.ly/3WMgDBW' },
-  { cdname: '메이크스타', cdurl: 'https://bit.ly/3Lfd98x' },
-  { cdname: '뮤직코리아', cdurl: 'https://bit.ly/42M7DQW' },
-  { cdname: '위드뮤', cdurl: 'https://bit.ly/4os8SwZ' },
-  { cdname: 'YES24', cdurl: 'https://bit.ly/42KaLNe' },
-  { cdname: '알라딘', cdurl: 'https://bit.ly/3WacdVq' },
-  { cdname: '뮤직플랜트', cdurl: 'https://bit.ly/47gT2hL' },
-  { cdname: '블루드림', cdurl: 'https://bit.ly/3WdE0UW' },
-  { cdname: '애플뮤직', cdurl: 'https://www.applemusic.co.kr/shop/shopbrand.html?search=itzy&refer=https:' },
-  { cdname: '카카오톡', cdurl: 'https://bit.ly/48AVgLc' },
-  { cdname: 'JYP FANS', cdurl: 'https://bit.ly/4heB1VT' },
+  { cdname: '카운팅스타', cdurl: 'https://bit.ly/4vIIeo5' },
+  { cdname: '메이크스타', cdurl: 'https://bit.ly/4mOHry0' },
+  { cdname: '뮤직코리아', cdurl: 'https://bit.ly/4mGk2yu' },
+  { cdname: '위드뮤', cdurl: 'https://bit.ly/4mGjvwu' },
+  { cdname: '무신사', cdurl: 'https://bit.ly/3Oxj2jK' },
+  { cdname: '뮤직플랜트', cdurl: 'https://bit.ly/4czclpe' },
+  { cdname: '블루드림', cdurl: 'https://bit.ly/4covbAB' },
+  { cdname: '애플뮤직', cdurl: 'https://bit.ly/4czeKQI' },
+  { cdname: 'JYP FANS', cdurl: 'https://bit.ly/4vIHT4P' },
+  { cdname: '스타리버', cdurl: 'https://bit.ly/48LrRNy' },
+  { cdname: 'KMS', cdurl: 'https://bit.ly/4czd1uM' },
+  { cdname: '이즈위', cdurl: 'https://bit.ly/48LrQJu' },
 ];
