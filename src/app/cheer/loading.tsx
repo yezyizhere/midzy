@@ -5,7 +5,7 @@ export default function CheerLoading() {
     <div className="bg-neutral-900 min-h-screen flex flex-col items-center justify-center p-5">
       {/* 믿지 컨셉에 맞춘 핑크색 로딩 바 */}
       <div className="w-48 h-1.5 bg-zinc-800 rounded-full overflow-hidden relative">
-        <div className="absolute top-0 left-0 h-full bg-pink-500 animate-loading-bar rounded-full shadow-[0_0_10px_#ec4899]"></div>
+        <div className="absolute top-0 left-0 h-full bg-pink-500 animate-loading-bar rounded-full shadow-[0_0_10px_#FF4F81]"></div>
       </div>
       
       <div className="mt-6 flex flex-col items-center gap-2">

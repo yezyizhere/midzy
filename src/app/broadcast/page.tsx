@@ -56,7 +56,7 @@ export default function BroadcastPage() {
                       key={idx}
                       onClick={() => toggleCheck(idx)}
                       className={`relative flex flex-col items-center cursor-pointer rounded-lg p-4 transition-all duration-300 border-2 ${isChecked
-                        ? "bg-pink-500/10 border-pink-500 shadow-[0_0_15px_rgba(236,72,153,0.1)]"
+                        ? "bg-pink-500/10 border-pink-500 shadow-[0_0_15px_rgba(255,79,129,0.1)]"
                         : "bg-zinc-800 border-zinc-700 hover:border-zinc-500"
                         }`}
                     >

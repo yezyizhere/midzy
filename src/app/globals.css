@@ -5,6 +5,18 @@
 @theme {
   --font-sans: "Pretendard Variable", Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, "Helvetica Neue", "Segoe UI", "Apple SD Gothic Neo", "Noto Sans KR", "Malgun Gothic", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", sans-serif;
   --font-cursive: "Dancing Script", cursive;
+  --color-pink-50: #FF4F81;
+  --color-pink-100: #FF4F81;
+  --color-pink-200: #FF4F81;
+  --color-pink-300: #FF4F81;
+  --color-pink-400: #FF4F81;
+  --color-pink-500: #FF4F81;
+  --color-pink-600: #FF4F81;
+  --color-pink-700: #FF4F81;
+  --color-pink-800: #FF4F81;
+  --color-pink-900: #FF4F81;
+  --color-pink-950: #FF4F81;
+  --color-neutral-900: #161616;
 }
 
 body {
@@ -15,16 +27,19 @@ body {
   transition: all 0.3s ease;
   overflow: hidden;
 }
+
 .slide-fade-leave-active {
   transition: none;
   overflow: hidden;
 }
+
 .slide-fade-enter-from,
 .slide-fade-leave-to {
   max-height: 0;
   opacity: 0;
   transform: translateY(-10px);
 }
+
 .slide-fade-enter-to,
 .slide-fade-leave-from {
   max-height: 500px;
@@ -36,7 +51,7 @@ body {
   position: relative;
   display: inline-block;
   color: transparent;
-  background: linear-gradient(74deg, #4285f4 0, #9b72cb 9%, #d96570 20%, #d96570 24%, #9b72cb 35%, #4285f4 44%, #9b72cb 50%, #d96570 56%, #1b1c1d 75%, #1b1c1d 100%);
+  background: linear-gradient(74deg, #4285f4 0, #9b72cb 9%, #FF4F81 20%, #FF4F81 24%, #9b72cb 35%, #4285f4 44%, #9b72cb 50%, #FF4F81 56%, #1b1c1d 75%, #1b1c1d 100%);
   background-size: 400% 100%;
   background-clip: text;
   -webkit-background-clip: text;
@@ -50,30 +65,40 @@ body {
   line-height: 1.8;
   word-break: keep-all;
 }
-.prose-cheer h1, .prose-cheer h2, .prose-cheer h3 {
+
+.prose-cheer h1,
+.prose-cheer h2,
+.prose-cheer h3 {
   color: #fff;
   font-weight: 800;
   margin-top: 1.5em;
   margin-bottom: 0.5em;
 }
+
 .prose-cheer p {
   margin-bottom: 1em;
 }
+
 .prose-cheer strong {
   font-weight: 700;
-  color: #ec4899; /* pink-500 default */
+  color: #FF4F81;
+  /* pink-500 default */
 }
+
 /* Allow overrides for custom colors in markdown HTML */
 .prose-cheer .text-blue-500 {
   color: #3b82f6 !important;
 }
+
 .prose-cheer .text-red-500 {
   color: #ef4444 !important;
 }
+
 .prose-cheer em {
   font-style: italic;
   color: #9ca3af;
 }
+
 .prose-cheer br {
   display: block;
   content: "";

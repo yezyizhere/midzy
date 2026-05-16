@@ -159,7 +159,7 @@ export default function SurveyPage() {
       {(pageIndex >= 1 && pageIndex <= 5) && (
         <section className="flex flex-col justify-center items-center min-h-[80vh] px-5 md:px-7 mt-5">
           <div className="w-full max-w-xl space-y-4">
-            <div className="text-center pt-6 text-pink-400 font-bold tracking-wide text-xl md:text-2xl drop-shadow-[0_0_10px_rgba(236,72,153,0.5)]">
+            <div className="text-center pt-6 text-pink-400 font-bold tracking-wide text-xl md:text-2xl drop-shadow-[0_0_10px_rgba(255,79,129,0.5)]">
               STEP {pageIndex} / 5
             </div>
             {currentQuestions.map((question, idx) => {
@@ -173,7 +173,7 @@ export default function SurveyPage() {
                     <button
                       onClick={() => handleAnswer(qIdx, 1)}
                       className={`px-5 py-2.5 rounded-xl font-black text-lg transition-all ${answers[qIdx] === 1
-                        ? 'border-2 border-pink-500 bg-pink-500 text-white shadow-[0_0_15px_rgba(236,72,153,0.5)] scale-105'
+                        ? 'border-2 border-pink-500 bg-pink-500 text-white shadow-[0_0_15px_rgba(255,79,129,0.5)] scale-105'
                         : 'border-2 border-zinc-600 bg-zinc-800/50 text-zinc-400 hover:border-pink-400 hover:text-pink-100'
                         }`}
                     >
@@ -199,7 +199,7 @@ export default function SurveyPage() {
               onClick={() => setPageIndex(pageIndex + 1)}
               disabled={!isCurrentPageAnswered}
               className={`px-10 py-3 rounded-full font-bold text-lg transition-all ${isCurrentPageAnswered
-                ? 'bg-gradient-to-r from-pink-500 to-pink-600 text-white shadow-[0_0_20px_rgba(236,72,153,0.4)] hover:scale-105'
+                ? 'bg-gradient-to-r from-pink-500 to-pink-600 text-white shadow-[0_0_20px_rgba(255,79,129,0.4)] hover:scale-105'
                 : 'bg-zinc-700 text-zinc-500 cursor-not-allowed'
                 }`}
             >

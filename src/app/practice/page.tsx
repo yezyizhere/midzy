@@ -40,7 +40,7 @@ export default function PracticePage() {
   };
 
   return (
-    <main className="bg-[#151618] min-h-screen text-zinc-200 font-sans pb-24 relative">
+    <main className="bg-[#161616] min-h-screen text-zinc-200 font-sans pb-24 relative">
       <Header />
 
       <div className="max-w-3xl mx-auto px-5 py-6">
@@ -131,7 +131,7 @@ export default function PracticePage() {
       </div>
 
       {/* Bottom Sticky Button Container */}
-      <div className="fixed bottom-0 left-0 right-0 p-4 bg-[#151618]/95 backdrop-blur-md border-t border-zinc-800 flex justify-center z-40">
+      <div className="fixed bottom-0 left-0 right-0 p-4 bg-[#161616]/95 backdrop-blur-md border-t border-zinc-800 flex justify-center z-40">
         <div className="w-full max-w-3xl">
           <button
             onClick={handleApply}
