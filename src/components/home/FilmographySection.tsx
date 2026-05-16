@@ -8,7 +8,7 @@ import { ALBUM_ITEMS } from "@/constants/data";
 export default function FilmographySection() {
   const [currentPage, setCurrentPage] = useState(1);
   const [sortAsc, setSortAsc] = useState(true);
-  const pageSize = 6;
+  const pageSize = 12;
 
   const sortedItems = useMemo(() => {
     return [...ALBUM_ITEMS].sort((a, b) =>
@@ -36,21 +36,21 @@ export default function FilmographySection() {
         {sortAsc ? <span>▽</span> : <span>△</span>}
       </button>
 
-      <nav className="grid grid-cols-2 md:grid-cols-3 w-full gap-5">
+      <nav className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 w-full gap-5 lg:gap-8">
         {pagedItems.map((item, idx) => (
-          <div key={idx} className="ring-1 ring-pink-500 rounded-lg p-3 flex flex-col items-center">
+          <div key={idx} className="ring-1 ring-pink-500 rounded-lg p-3 lg:p-5 flex flex-col items-center shadow-lg bg-zinc-800/30">
             <a href={item.albumLink} target="_blank" rel="noopener noreferrer">
               <Image
                 src={item.albumImage}
                 alt={item.albumName}
-                width={128}
-                height={128}
+                width={200}
+                height={200}
                 priority
-                className="w-32 h-32 object-cover rounded-md mb-2 transition duration-300 hover:scale-105"
+                className="w-32 h-32 lg:w-48 lg:h-48 object-cover rounded-md mb-3 transition duration-300 hover:scale-105"
               />
             </a>
-            <div className="font-bold text-gray-200 text-center text-sm">{item.albumName}</div>
-            <div className="text-xs text-gray-400 mt-1">{item.albumDate}</div>
+            <div className="font-bold text-gray-200 text-center text-sm lg:text-base">{item.albumName}</div>
+            <div className="text-xs lg:text-sm text-gray-400 mt-1">{item.albumDate}</div>
           </div>
         ))}
       </nav>

@@ -33,9 +33,9 @@ export default function Home() {
       </div>
 
       {/* Responsive Container for PC */}
-      <div className="max-w-3xl mx-auto">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Tab Navigation */}
-        <nav className="flex items-center justify-center text-center my-10 w-full px-4">
+        <nav className="flex items-center justify-center text-center my-10 lg:my-16 w-full max-w-3xl mx-auto">
           {TABS.map((tab) => (
             <button
               key={tab.id}
