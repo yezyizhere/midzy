@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import Header from '@/components/Header';
 import { LIVE_YEAR_BUTTONS, LIVE_YEAR_PICTURES } from '@/constants/liveData';
 
@@ -19,7 +20,7 @@ export default async function LiveYearPage(props: { params: Promise<{ year: stri
       <div className="p-5 max-w-3xl mx-auto">
         {/* 상단 */}
         <div className="flex justify-center">
-          <img src={yearImage} className="rounded-lg h-50 w-full max-w-sm object-cover shadow-lg border border-zinc-800" alt={`${year} Archive`} />
+          <Image src={yearImage} width={400} height={200} priority className="rounded-lg h-50 w-full max-w-sm object-cover shadow-lg border border-zinc-800" alt={`${year} Archive`} />
         </div>
         <h1 className="py-8 text-center text-3xl flex justify-center gap-3 items-center">
           <span className="text-sky-400 font-extrabold tracking-widest">{year}</span>

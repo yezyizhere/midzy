@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
+import Image from 'next/image';
 import Header from '@/components/Header';
 import { LIVE_SELECT_BUTTONS } from '@/constants/liveData';
 
@@ -21,7 +22,7 @@ export default function LivePage() {
       <div className="p-5 max-w-3xl mx-auto">
         {/* 상단 */}
         <div className="flex justify-center">
-          <img src="/picture/vlive/vlivem.jpg" className="rounded-lg h-50 w-full max-w-sm object-cover shadow-lg border border-zinc-800" alt="Vlive" />
+          <Image src="/picture/vlive/vlivem.jpg" width={400} height={200} priority className="rounded-lg h-50 w-full max-w-sm object-cover shadow-lg border border-zinc-800" alt="Vlive" />
         </div>
         <h1 className="py-10 text-center text-3xl flex justify-center gap-4 items-center">
           <span className="font-cursive text-4xl">Re:Wind</span>

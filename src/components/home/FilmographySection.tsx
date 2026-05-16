@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+
 import { useMemo, useState } from "react";
 import { ALBUM_ITEMS } from "@/constants/data";
 
@@ -38,9 +40,12 @@ export default function FilmographySection() {
         {pagedItems.map((item, idx) => (
           <div key={idx} className="ring-1 ring-pink-500 rounded-lg p-3 flex flex-col items-center">
             <a href={item.albumLink} target="_blank" rel="noopener noreferrer">
-              <img
+              <Image
                 src={item.albumImage}
                 alt={item.albumName}
+                width={128}
+                height={128}
+                priority
                 className="w-32 h-32 object-cover rounded-md mb-2 transition duration-300 hover:scale-105"
               />
             </a>

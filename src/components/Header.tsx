@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 export default function Header() {
@@ -45,7 +46,7 @@ export default function Header() {
     <section ref={headerRef} className="bg-neutral-900 border-b border-zinc-200 text-zinc-200 h-15 z-50 relative">
       <nav className="h-full flex items-center justify-between mx-7 relative z-50 bg-neutral-900">
         <Link href="/">
-          <img src="/picture/logo.png" alt="ITZY" className="w-8 h-7" />
+          <Image src="/picture/logo.png" alt="ITZY" width={32} height={28} className="w-8 h-7" priority />
         </Link>
 
         <div className="flex gap-5">

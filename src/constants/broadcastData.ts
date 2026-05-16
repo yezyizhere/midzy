@@ -1,7 +1,7 @@
 export const BOX_ITEMS = [
   { img: '/picture/broad/ring.jpg', title: '라이트 링' },
   { img: '/picture/broad/battery.png', title: 'AAA 건전지 x 3' },
-  { img: '/picture/broad/FAN.png', title: '공믿 카드' },
+  { img: '/picture/broad/fancard.png', title: '공믿 카드' },
   { img: '/picture/broad/namecard.png', title: '신분증' },
   { img: '/picture/broad/buy.png', title: '음원 구매 내역서' },
   { img: '/picture/broad/album.jpg', title: '음반 (일반앨범)' },

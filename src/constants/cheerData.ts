@@ -1,5 +1,5 @@
 export const CHEER_ALBUMS = [
-  // { albumImage: '', albumName: '제목', label: '21' },
+  // { albumImage: '', albumName: 'Motto', label: '22' },
   { albumImage: '/picture/albums/album_17.jpg', albumName: 'Ice Cream', label: '21' },
   { albumImage: '/picture/album/daechoo.jpg', albumName: 'That\'s A No No', label: '20' },
   { albumImage: '/picture/albums/album_16.jpg', albumName: 'TUNNEL VISION', label: '19' },

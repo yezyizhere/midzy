@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Header from '@/components/Header';
 import { BOX_ITEMS, CD_LINKS } from '@/constants/broadcastData';
 
@@ -60,7 +61,7 @@ export default function BroadcastPage() {
                         : "bg-zinc-800 border-zinc-700 hover:border-zinc-500"
                         }`}
                     >
-                      <img src={item.img} alt={item.title} className="w-24 h-16 object-contain rounded-md mb-3 bg-zinc-900/50" />
+                      <Image src={item.img} alt={item.title} width={96} height={64} className="w-24 h-16 object-contain rounded-md mb-3 bg-zinc-900/50" />
                       <span className={`text-sm text-center font-medium ${isChecked ? "text-pink-400" : "text-zinc-300"}`}>
                         {item.title}
                       </span>

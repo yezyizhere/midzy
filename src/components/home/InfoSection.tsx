@@ -1,4 +1,5 @@
 import { YOUTUBE_LIST } from "@/constants/data";
+import Image from "next/image";
 
 interface InfoSectionProps {
   dDayStr: string;
@@ -10,9 +11,12 @@ export default function InfoSection({ dDayStr }: InfoSectionProps) {
       <div className="flex flex-col gap-5 pt-5">
         {YOUTUBE_LIST.map((yt, idx) => (
           <a key={idx} href={yt.link} target="_blank" rel="noopener noreferrer">
-            <img
+            <Image
               src={yt.image}
               alt={`Youtube Video ${idx + 1}`}
+              width={640}
+              height={360}
+              priority={idx === 0}
               className="mx-auto w-80 h-auto aspect-video object-cover rounded shadow-md hover:scale-105 transition duration-300"
             />
           </a>

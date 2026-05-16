@@ -2,6 +2,7 @@
 
 import { useState, useMemo } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import Header from '@/components/Header';
 import { CHEER_ALBUMS } from '@/constants/cheerData';
 
@@ -46,7 +47,7 @@ export default function CheerPage() {
       <div className="max-w-2xl mx-auto px-5">
         {/* 응원법 진입 문구 */}
         <div className="text-3xl text-center pt-10 pb-5 flex gap-3 items-center justify-center font-bold tracking-wider">
-          <img src="/picture/logo.png" alt="ITZY Logo" className="w-10 h-auto" />
+          <Image src="/picture/logo.png" alt="ITZY Logo" width={40} height={40} className="w-10 h-10 object-contain" priority />
           <span className="text-pink-500">Cheer Guide</span>
         </div>
 
@@ -70,9 +71,12 @@ export default function CheerPage() {
                 className="group ring-1 ring-pink-500/50 hover:ring-pink-500 rounded-lg p-4 flex flex-col items-center gap-3 transition-all duration-300 bg-zinc-800/30 hover:bg-zinc-800"
               >
                 <div className="overflow-hidden rounded-md shadow-lg">
-                  <img
+                  <Image
                     src={item.albumImage}
                     alt={item.albumName}
+                    width={300}
+                    height={300}
+                    priority
                     className="w-24 h-24 object-cover transform transition-transform duration-300 group-hover:scale-110"
                   />
                 </div>
