@@ -30,40 +30,40 @@ const melonMap: Record<string, string> = {
 
 // 지니 링크
 const genieMap: Record<string, string> = {
-  tap1: '',
-  tap2: '',
-  tap3: '',
-  tap4: '',
-  tap5: '',
-  tap6: '',
-  tap7: '',
-  tap8: '',
+  tap1: '115108012',
+  tap2: '115108013',
+  tap3: '115108014',
+  tap4: '115108015',
+  tap5: '115108016',
+  tap6: '115108017',
+  tap7: '115108018',
+  tap8: '115108019',
   tap9: '89952549',
 };
 
 // 벅스 링크
 const bugsMap: Record<string, string> = {
-  tap1: '',
-  tap2: '',
-  tap3: '',
-  tap4: '',
-  tap5: '',
-  tap6: '',
-  tap7: '',
-  tap8: '',
+  tap1: '33939692',
+  tap2: '33939693',
+  tap3: '33939694',
+  tap4: '33939695',
+  tap5: '33939696',
+  tap6: '33939697',
+  tap7: '33324398',
+  tap8: '33939699',
   tap9: '31852659',
 };
 
 // 바이브 링크
 const vibeMap: Record<string, string> = {
-  tap1: '',
-  tap2: '',
-  tap3: '',
-  tap4: '',
-  tap5: '',
-  tap6: '',
-  tap7: '',
-  tap8: '',
+  tap1: '103553493',
+  tap2: '103553494',
+  tap3: '103553495',
+  tap4: '103553496',
+  tap5: '103553497',
+  tap6: '103553498',
+  tap7: '103553499',
+  tap8: '103553500',
   tap9: '39913695',
 };
 
