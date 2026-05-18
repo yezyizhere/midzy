@@ -6,65 +6,65 @@ import Header from '@/components/Header';
 /*************************************************************************** 변동사항 **************************************************************************/
 // 스밍 순서
 const TapSets = [
-  ['tap1', 'tap2', 'tap3', 'tap4', 'tap5', 'tap6'],
-  ['tap1', 'tap2', 'tap3', 'tap4', 'tap5', 'tap7'],
-  ['tap1', 'tap6', 'tap2', 'tap3', 'tap8'],
-  ['tap1', 'tap4', 'tap5', 'tap6', 'tap9'],
+  ['tap1', 'tap2', 'tap3', 'tap4', 'tap5'],
+  ['tap1', 'tap6', 'tap7', 'tap8', 'tap9'],
+  ['tap1', 'tap2', 'tap3', 'tap4', 'tap5'],
+  ['tap1', 'tap6', 'tap7', 'tap8', 'tap9'],
 ];
 
 // 스밍 순서 긴거
-const TapSetting = ['tap1', 'tap2', 'tap3', 'tap4', 'tap5', 'tap6', 'tap1', 'tap2', 'tap3', 'tap4', 'tap5', 'tap7', 'tap1', 'tap6', 'tap2', 'tap3', 'tap8', 'tap1', 'tap4', 'tap5', 'tap6', 'tap9'];
+const TapSetting = ['tap1', 'tap2', 'tap3', 'tap4', 'tap5', 'tap1', 'tap6', 'tap7', 'tap8', 'tap9', 'tap1', 'tap2', 'tap3', 'tap4', 'tap5', 'tap1', 'tap6', 'tap7', 'tap8', 'tap9'];
 
 // 멜론 링크
 const melonMap: Record<string, string> = {
-  tap1: '600467604',
-  tap2: '600467603',
-  tap3: '600467605',
-  tap4: '600467606',
-  tap5: '600467607',
-  tap6: '600467608',
-  tap7: '38100189',
-  tap8: '39120868',
-  tap9: '600234958',
+  tap1: '602010541',
+  tap2: '602010542',
+  tap3: '602010543',
+  tap4: '602010544',
+  tap5: '602010545',
+  tap6: '602010546',
+  tap7: '602010547',
+  tap8: '602010548',
+  tap9: '32445341',
 };
 
 // 지니 링크
 const genieMap: Record<string, string> = {
-  tap1: '112601905',
-  tap2: '112601904',
-  tap3: '112601906',
-  tap4: '112601907',
-  tap5: '112601908',
-  tap6: '112601909',
-  tap7: '108065467',
-  tap8: '110421762',
-  tap9: '112061007',
+  tap1: '',
+  tap2: '',
+  tap3: '',
+  tap4: '',
+  tap5: '',
+  tap6: '',
+  tap7: '',
+  tap8: '',
+  tap9: '89952549',
 };
 
 // 벅스 링크
 const bugsMap: Record<string, string> = {
-  tap1: '33737812',
-  tap2: '33737811',
-  tap3: '33737813',
-  tap4: '33737814',
-  tap5: '33737815',
-  tap6: '33737816',
-  tap7: '33324396',
-  tap8: '33563976',
-  tap9: '33700617',
+  tap1: '',
+  tap2: '',
+  tap3: '',
+  tap4: '',
+  tap5: '',
+  tap6: '',
+  tap7: '',
+  tap8: '',
+  tap9: '31852659',
 };
 
 // 바이브 링크
 const vibeMap: Record<string, string> = {
-  tap1: '98618678',
-  tap2: '98618677',
-  tap3: '98618679',
-  tap4: '98618680',
-  tap5: '98618681',
-  tap6: '98618682',
-  tap7: '87485723',
-  tap8: '94581170',
-  tap9: '97376255',
+  tap1: '',
+  tap2: '',
+  tap3: '',
+  tap4: '',
+  tap5: '',
+  tap6: '',
+  tap7: '',
+  tap8: '',
+  tap9: '39913695',
 };
 
 // 스포티파이
@@ -163,7 +163,7 @@ export default function StreamingPage() {
         {/* 새로고침 / 상단글 */}
         <button onClick={handleRefresh} className="flex flex-col pb-5 pt-8 w-full items-center">
           <div className="text-2xl text-center font-bold tracking-wide">원클릭 스밍리스트</div>
-          <div className="text-xl text-center text-pink-500 mt-2 font-semibold">Ice Cream</div>
+          <div className="text-3xl text-center text-emerald-500 mt-2 font-semibold">Motto</div>
           <div className="text-zinc-500 text-sm text-center mt-2">↑ 누르면 새로고침</div>
         </button>
 
