@@ -5,8 +5,8 @@ export type YoutubeInfo = {
 
 export const YOUTUBE_LIST: YoutubeInfo[] = [
   {
-    link: "https://www.youtube.com/watch?v=x0FwbTiD3iA",
-    image: "https://i.ytimg.com/vi/x0FwbTiD3iA/hqdefault.jpg?sqp=-oaymwEnCNACELwBSFryq4qpAxkIARUAAIhCGAHYAQHiAQoIGBACGAY4AUAB&rs=AOn4CLCXpsz5U_R2FuqslxeX8wrYa6UGbQ",
+    link: "https://www.youtube.com/watch?v=1jKnI_ib8c8",
+    image: "https://i.ytimg.com/vi/1jKnI_ib8c8/hqdefault.jpg",
   }
 ];
 
