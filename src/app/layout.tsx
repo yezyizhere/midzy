@@ -1,21 +1,21 @@
-import "./globals.css";
+import "@/components/globals.css";
 import { type Metadata } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_BASE_URL || 
-    (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` : 
-     process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 
-     "http://localhost:3000")
+    process.env.NEXT_PUBLIC_BASE_URL ||
+    (process.env.VERCEL_PROJECT_PRODUCTION_URL ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}` :
+      process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` :
+        "http://localhost:3000")
   ),
-  title: "MIDZY",
-  description: "ITZY Fan Platform",
+  title: "예지의 생일잔치",
+  description: "Black Heart Team",
   openGraph: {
-    title: "MIDZY",
-    description: "ITZY Fan Platform",
+    title: "예지의 생일잔치",
+    description: "Black Heart Team",
     images: [
       {
-        url: "/picture/thumbnail.jpg",
+        url: "/picture/yeji.jpg",
         width: 1200,
         height: 630,
       },
@@ -24,9 +24,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "MIDZY",
-    description: "ITZY Fan Platform",
-    images: ["/picture/thumbnail.jpg"],
+    title: "예지의 생일잔치",
+    description: "Black Heart Team",
+    images: ["/picture/yeji.jpg"],
   },
   icons: {
     icon: "/picture/logo.png",

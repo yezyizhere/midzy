@@ -1,84 +1,25 @@
-"use client";
-
-import { useState, useEffect } from "react";
-import Header from "@/components/Header";
-import InfoSection from "@/components/home/InfoSection";
-import FilmographySection from "@/components/home/FilmographySection";
-import ProfileSection from "@/components/home/ProfileSection";
-import { calculateDday } from "@/lib/utils";
-
-const TABS = [
-  { id: 0, label: "Info" },
-  { id: 1, label: "Filmography" },
-  { id: 2, label: "Profile" },
-];
-
 export default function Home() {
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [dDayStr, setDDayStr] = useState("");
-
-  useEffect(() => {
-    const debutDate = "2019-02-12";
-    setDDayStr(calculateDday(debutDate));
-  }, []);
-
-  const handleTabChange = (index: number) => {
-    setActiveIndex(index);
-  };
-
   return (
-    <main className="bg-neutral-900 min-h-screen text-zinc-200">
-      <div onClickCapture={() => handleTabChange(0)}>
-        <Header />
-      </div>
+    <main className="min-h-screen flex flex-col items-center justify-center bg-gray-100 p-4">
+      <div className="w-full max-w-sm md:max-w-4xl bg-white rounded-xl shadow-lg p-6 md:p-12 text-center transition-all duration-300">
+        <h1 className="text-2xl md:text-4xl font-bold text-gray-800 mb-4">
+          준비 중...
+        </h1>
 
-      {/* Responsive Container for PC */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Tab Navigation */}
-        <nav className="flex items-center justify-center text-center my-10 lg:my-16 w-full max-w-3xl mx-auto">
-          {TABS.map((tab) => (
-            <button
-              key={tab.id}
-              className={`p-1 w-1/3 transition-all duration-300 ${activeIndex === tab.id
-                ? "border-b-2 border-pink-400 text-white font-bold"
-                : "border-b border-zinc-700 text-zinc-500 hover:text-zinc-300"
-                }`}
-              onClick={() => handleTabChange(tab.id)}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </nav>
-
-        {/* Content Sections */}
-        <div className="relative overflow-hidden min-h-[500px]">
-          {/* Info */}
-          <TabPanel active={activeIndex === 0}>
-            <InfoSection dDayStr={dDayStr} />
-          </TabPanel>
-
-          {/* Filmography */}
-          <TabPanel active={activeIndex === 1}>
-            <FilmographySection />
-          </TabPanel>
-
-          {/* Profile */}
-          <TabPanel active={activeIndex === 2}>
-            <ProfileSection />
-          </TabPanel>
+        {/* Mobile View Indicator */}
+        <div className="block md:hidden bg-blue-100 text-blue-800 p-4 rounded-lg font-medium shadow-inner">
+          📱 스마트폰 접속 감지
         </div>
+
+        {/* PC View Indicator */}
+        <div className="hidden md:block bg-green-100 text-green-800 p-6 rounded-lg font-medium text-lg shadow-inner">
+          💻 PC / 태블릿 접속 감지
+        </div>
+
+        <p className="mt-6 text-gray-500 text-sm md:text-base">
+          현재 준비중입니다. 며칠만 기다려주세요.
+        </p>
       </div>
     </main>
-  );
-}
-
-// Internal Helper for Tab Transitions
-function TabPanel({ active, children }: { active: boolean; children: React.ReactNode }) {
-  if (!active) return null;
-
-  return (
-    <div className="transition-all duration-300 animate-in fade-in slide-in-from-top-2">
-      {children}
-    </div>
   );
 }
